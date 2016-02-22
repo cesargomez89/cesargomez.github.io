@@ -7,9 +7,9 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../assets/css/app.css?v=f19f1ec7e0">
-  <link rel="stylesheet" type="text/css" href="../assets/fonts/flaticon/flaticon.css?v=f19f1ec7e0">
-  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f19f1ec7e0">
+  <link rel="stylesheet" type="text/css" href="../assets/css/app.css?v=0f152782f8">
+  <link rel="stylesheet" type="text/css" href="../assets/fonts/flaticon/flaticon.css?v=0f152782f8">
+  <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=0f152782f8">
   <link rel="canonical" href="http://localhost:2368/github-pages-using-ghost-buster/">
     <meta name="referrer" content="origin">
     
@@ -20,7 +20,7 @@
     <meta property="og:url" content="http://localhost:2368/github-pages-using-ghost-buster/">
     <meta property="og:image" content="http://localhost:2368/content/images/2016/01/baracktocat.jpg">
     <meta property="article:published_time" content="2016-01-31T00:04:10.289Z">
-    <meta property="article:modified_time" content="2016-02-22T21:01:01.589Z">
+    <meta property="article:modified_time" content="2016-02-22T21:11:18.869Z">
     <meta property="article:tag" content="Github">
     <meta property="article:tag" content="Tools">
     
@@ -46,7 +46,7 @@
     "headline": "Github pages using Ghost + Buster",
     "url": "http://localhost:2368/github-pages-using-ghost-buster/",
     "datePublished": "2016-01-31T00:04:10.289Z",
-    "dateModified": "2016-02-22T21:01:01.589Z",
+    "dateModified": "2016-02-22T21:11:18.869Z",
     "image": "http://localhost:2368/content/images/2016/01/baracktocat.jpg",
     "keywords": "Github, Tools",
     "description": "Dependencies Node JS ( 0.10.x, 0.12.x and 4.2.x only) Python installer wget Ghost Ghost is a blog template engine, you can pay for the hosting an other stuff they provide  or you can download the..."
@@ -173,23 +173,26 @@ or <br>
 </code></pre>
 
 <p>Just remember that Buster requires wget to run properly. <br>
-Clone or create your github pages repository, and remember to do it in another folder outside of the ghost folder.</p>
+Create a new folder for your website  </p>
+
+<pre><code>mkdir my-website-buster  
+</code></pre>
+
+<p>Go inside and run <code>buster setup</code>, buster will ask for the repo, just paste your github pages repo url <code>git@github.com:cesargomez89/cesargomez89.github.io.git</code>.</p>
 
 <p>If you don't know how to use github pages go <a href="https://pages.github.com/">here</a></p>
 
-<pre><code class="language- ">git clone git@github.com:cesargomez89/cesargomez89.github.io.git  
-</code></pre>
-
-<p>Run your ghost server and go into the github pages folder. Run the next command:</p>
+<p>With your ghost server running, inside your <code>my-website-buster</code>, run the next command:</p>
 
 <pre><code>buster generate --domain=http://127.0.0.1:2368  
 </code></pre>
 
-<p>Buster will generate the static website. Commit everything inside github pages and push it to the remote master branch.  </p>
+<p>Buster will generate the static website inside the static folder. Go into the static folder and commit everything and push it to the remote master branch.  </p>
 
-<pre><code>git add .  
+<pre><code>cd static  
+git add .  
 git commit -m 'first website'  
-git push origin master  
+git push origin master -f  
 </code></pre>
 
 <p>Wait like 10 minutes and that's it. <br>
@@ -266,5 +269,5 @@ You have your own website running on github pages.</p>
         </div>
     </footer>
   
-  <script type="text/javascript" src="../assets/js/app.js?v=f19f1ec7e0"></script>
+  <script type="text/javascript" src="../assets/js/app.js?v=0f152782f8"></script>
 </body>
